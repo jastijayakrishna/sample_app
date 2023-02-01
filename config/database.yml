@@ -6,7 +6,7 @@
 #
 default: &default
   adapter: sqlite3
-  pool: 5
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   timeout: 5000
 
 development:
@@ -26,7 +26,6 @@ production:
   # For details on connection pooling, see Rails configuration guide
   # https://guides.rubyonrails.org/configuring.html#database-pooling
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  database: sample_app_production
+  database: sample_app
   username: sample_app
   password: <%= ENV['SAMPLE_APP_DATABASE_PASSWORD'] %>
-

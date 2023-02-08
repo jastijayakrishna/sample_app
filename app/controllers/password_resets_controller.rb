@@ -1,7 +1,7 @@
 class PasswordResetsController < ApplicationController
   before_action :get_user,   only: [:edit, :update]
   before_action :valid_user, only: [:edit, :update]
-  before_action :check_expiration, only: [:edit, :update]
+  before_action :check_expiration, only: [:edit, :update]   
 
   def new
   end
@@ -34,8 +34,7 @@ class PasswordResetsController < ApplicationController
       render 'edit', status: :unprocessable_entity      # Case 2
     end
   end
-   private
-
+  private
     def user_params
       params.require(:user).permit(:password, :password_confirmation)
     end

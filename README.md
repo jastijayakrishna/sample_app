@@ -41,3 +41,5 @@ $ rails server
 
 For more information, see the
 [*Ruby on Rails Tutorial* book](https://www.railstutorial.org/book).
+## Here is the deployed version of the website
+https://sleepy-castle-39880.herokuapp.com/
